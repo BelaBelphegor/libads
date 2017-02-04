@@ -6,13 +6,14 @@
 #    By: tiboitel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/03 16:28:46 by tiboitel          #+#    #+#              #
-#    Updated: 2017/02/04 16:50:51 by tiboitel         ###   ########.fr        #
+#    Updated: 2017/02/04 18:29:40 by tiboitel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libads.a
 INCLUDES	=	./includes
-SRCS		=	ads_rand.c
+SRCS		=	math/ads_rand.c \
+				datastructure/ads_linked_node.c
 SRCSPATH	=	./srcs/
 CC 			=	clang
 CCFLAGS		=	-Wall -Werror -Wextra -O3
