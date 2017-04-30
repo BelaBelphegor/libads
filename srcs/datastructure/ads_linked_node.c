@@ -6,7 +6,7 @@
 /*   By: tiboitel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/04 18:06:01 by tiboitel          #+#    #+#             */
-/*   Updated: 2017/02/04 18:37:30 by tiboitel         ###   ########.fr       */
+/*   Updated: 2017/02/06 20:24:00 by tiboitel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,16 @@ void			ads_node_set_content(t_ads_node *node, t_ads_element *content)
 	if (node == NULL)
 		return ;
 	node->content = content;
+}
+
+void			ads_node_link(t_ads_node *current, t_ads_node *next)
+{
+	current->next = next;
+	next->prev = current;
+}
+
+void			ads_node_unlink(t_ads_node *first, t_ads_node *second)
+{
+	first->next = NULL;
+	second->prev = NULL;
 }
